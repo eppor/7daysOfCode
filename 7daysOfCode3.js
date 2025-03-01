@@ -1,27 +1,42 @@
-const nome = prompt("Digite o seu nome:");
-let msgBoasVindas = alert(`Bem-vindo ${nome}!`);
+let nome = prompt("Insira o seu nome:");
 
-let escolhaArea = prompt("Com qual area voce gostaria de seguir? Digite 1 para o Front-End e 2 para o Back-End");
-if(escolhaArea == 1) {
-    prompt("Em que voce gostaria de se especializar? Digite 1 para React e 2 para Vue.");
-}
-else if(escolhaArea == 2) {
-    prompt("Qual linguagem de back-end voce quer aprofundar? Digite 1 para C++ ou 2 para Java.");
+let area = prompt(`${nome}, voce prefere a area de Front-End ou a area de Back-End?\nDigite 1 para Front-End ou 2 para Back-End.`);
+    if(area == 1){
+        alert(`Muito bem ${nome}! Front-End e uma area muito promissora!`);
+        let especializacao = prompt("Voce gostaria de aprender: \n1. React ou \n2. Vue?");
+        if(especializacao == 1) {
+            alert(`Otima escolha ${nome}! Siga aprendendo React para se desenvolver no Front-End!`);
+        }else if(especializacao == 2) {
+            alert(`Otima escolha ${nome}! Siga aprendendo Vue para se desenvolver no Front-End!`);
+        }else {
+            alert("Escolha invalida");
+        }
+    }else if(area == 2) {
+        alert(`Otima escolha, ${nome}! Back-End vai abrir pra voce muitas portas!`);
+        let linguagens = prompt("Voce quer aprender: \n1. C++ ou \n2. Java?");
+        if(linguagens == 1) {
+            alert(`Muito bem ${nome}! Siga aprendendo C++ e vai se tornar especialista em Back-End!`);
+        }else if(linguagens == 2) {
+            alert(`Muito bem ${nome}! Siga aprendendo Java e vai se tronar especialista em Back-End!`);
+        }else {
+            alert("Escolha invalida");
+        }
+    }else {
+    alert("Escolha invalida.");
+    }
+
+let escolha = prompt(`Parabens ${nome}! Voce gostaria de: \n1. se especializar nessa area ou \n2.seguir se desenvolvendo para se tornar Fullstack?`);
+if(escolha == 1) {
+    alert(`Otimo ${nome}! Isso ai!`);
+}else if(escolha == 2) {
+    alert(`Parabens ${nome}! Otima escolha!`);
 }else {
-    prompt("Resposta invalida. Digite 1 ou 2.");
+    alert("Escolha invalida");
 }
 
-let msgProsseguimento = prompt("Otima escolha! Voce gostaria de se especializar nessa area? Digite 1 para sim e 2 para nao");
-if(msgProsseguimento == 1) {
-    alert(`Muito bem ${nome}! Continue assim!`);
-}else {
-    prompt("Voce prefere se desenvolver para se tornar fullstack? Digite 1 para sim e 2 para nao.");
-}
-
-novaTecnologia = prompt("Tem mais alguma tecnologia que voce gostaria de aprender? Digite sim ou nao");
-while (novaTecnologia === "sim") {
-    prompt("Qual?");
-    alert(`Parabens ${nome}! ${novaTecnologia} E uma otima escolha! Vai ser muito util no seu caminho para se tornar u profissional!`);  
-    prompt("Tem mais alguma tecnologia que voce gostaria de aprender? Digite sim ou nao");    
+let outrasTec = "";
+outrasTec = prompt(`${nome}, voce gostaria de aprender alguma outra tecnologia? Qual?`);
+while(outrasTec != "" && outrasTec != "nao") { 
+   outrasTec = prompt(`Tem algo mais que voce gostaria de aprender?`);
 }
 
